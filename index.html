@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>App Contacts</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="http://frontendcreator.com/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" data-require="font-awesome@4.3.0" data-semver="4.3.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  </head>
+  <body aurelia-app="src/main">
+    <div class="splash">
+      <div class="message">Aurelia Contacts</div>
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+    
+    <script src="https://mattduffield.github.io/rjs-bundle/node_modules/requirejs/require.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/config.js"></script>
+    <script>
+      require.config({
+        paths: {
+          "jQuery": "https://code.jquery.com/jquery-3.2.1.min",
+          "bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min",
+          "aurelia-fetch-client": "https://mattduffield.github.io/rjs-bundle/node_modules/aurelia-fetch-client/dist/amd/aurelia-fetch-client",
+          "nprogress": "https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min"
+        },
+        shim: {
+          'bootstrap': ['jQuery']
+        }
+      })
+    </script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/aurelia.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/babel.js"></script>
+    <script>
+      require(['aurelia-bootstrapper']);
+    </script>
+  </body>
+</html>
